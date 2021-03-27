@@ -39,7 +39,8 @@ else:
     print('You must type A or B, let\'s just say the 1910s is your favourite decade')
     decade = 'A'
 
-travel = input('What\'s your favourite way to travel?\n(A)Driving\n(B)Flying\n')
+travel = input(
+    'What\'s your favourite way to travel?\n(A)Driving\n(B)Flying\n')
 if travel == 'A':
     print('Driving, nice choice!')
 elif travel == 'B':
@@ -48,4 +49,63 @@ else:
     print('You must type A or B, let\'s just say your favourite way to travel is by driving')
     travel = 'A'
 
-print(f'You choose {activity}, then {job}, then {value}, then {decade}, then {travel}.')
+print(
+    f'You choose {activity}, then {job}, then {value}, then {decade}, then {travel}.')
+
+
+sam_like = 0
+cam_like = 0
+kai_like = 0
+indy_like = 0
+
+if activity == 'A':
+    sam_like += 2
+    indy_like += 2
+    kai_like += 2
+else:
+    cam_like += 1
+    indy_like += 1
+
+if job == 'A':
+    sam_like += 2
+    indy_like += 2
+    cam_like -= 1
+else:
+    sam_like -= 1
+    kai_like += 2
+    indy_like += 1
+
+if value == 'A':
+    sam_like -= 1
+    kai_like += 1
+else:
+    sam_like += 2
+    cam_like += 2
+    indy_like += 1
+
+if decade == 'A':
+    cam_like += 2
+    sam_like += 2
+else:
+    kai_like += 1
+    indy_like += 2
+
+if travel == 'A':
+    sam_like -= 2
+    kai_like += 1
+    indy_like -= 1
+else:
+    sam_like += 1
+    cam_like += 1
+    kai_like -= 1
+
+if sam_like >= 3:
+    print('You\'re must like Sharp-Eyed Sam!')
+elif cam_like >= 3:
+    print('You\'re must like Curious Man!')
+elif kai_like >=3:
+    print('You\'re must like Keen Kai!')
+else:
+    print('You\'re must like Inquisitive Indy')
+
+    
